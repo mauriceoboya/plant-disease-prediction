@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: plant-disease-prediction
+Version: 0.0.0
+Summary: A project to classify plant diseases
+Home-page: https://github.com/mauriceoboya/plant-disease-prediction
+Author: mauriceoboya
+Author-email: mauriq97@gmail.com
+Project-URL: Bug Tracker, https://github.com/mauriceoboya/plant-disease-prediction/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Plant Diseases Prediction
