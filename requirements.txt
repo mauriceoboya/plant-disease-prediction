@@ -1,0 +1,16 @@
+ensure ==1.0.2
+pathlib
+tensorflow
+dvc
+pandas
+numpy
+seaborn
+matplotlib
+tqdm
+python-box==6.0.2
+joblib
+notebook
+types-PyYAML
+PyYAML
+scipy
+-e .
