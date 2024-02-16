@@ -5,6 +5,8 @@ import tensorflow as tf
 from cnnClassifier.entity.config_entity import PrepareBaseModelConfig
 from cnnClassifier.constants import *
 from pathlib import Path
+
+
 class PrepareBaseModel:
     def __init__(self,config:PrepareBaseModelConfig):
         self.config=config

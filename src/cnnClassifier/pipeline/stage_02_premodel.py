@@ -1,25 +1,29 @@
-from cnnClassifier  import logger
-from cnnClassifier.components.prepare_basemodel import PrepareBaseModel
-from cnnClassifier.config.configurations import ConfigurationManager
+
+from cnnClassifier.config.prepare_base_model_config import ConfigurationManager
+from cnnClassifier.components.prepbasemodel import PrepareBaseModel
+from cnnClassifier import logger
 
 
-STAGE_NAME2='Base model preparation'
+STAGE_NAME='base model ingestion stage'
 
-class BaseModelPreparationPipeline:
-    def main():
-            config=ConfigurationManager()
-            prepare_base_model_config=config.get_prepare_model_config()
-            prepare_base_model=PrepareBaseModel(config=prepare_base_model_config)
-            prepare_base_model.get_base_model()
-            prepare_base_model.update_base_model()
+class PrepareBaseModelPipeline:
+    def __init__(self):
+        pass
+    def main(self):
+        config=ConfigurationManager()
+        prepare_base_model_config=config.get_prepare_model_config()
+        prepare_base_model=PrepareBaseModel(config=prepare_base_model_config)
+        prepare_base_model.get_base_model()
+        prepare_base_model.update_base_model()
 
 
 if __name__=='__main__':
     try:
-        logger.info(f">>>> started {STAGE_NAME2}  <<<<<<<")
-        obj=BaseModelPreparationPipeline()
+        logger.info(f'>>>>>stage{STAGE_NAME} started <<<<<<<')
+        obj=PrepareBaseModelPipeline()
         obj.main()
-        logger.info(f">>>> completed {STAGE_NAME2}  <<<<<<<")
+        logger.info(f'>>>>>stage{STAGE_NAME} completed <<<<<<<')
     except Exception as e:
-        logger.error(f">>>> failed {STAGE_NAME2}  <<<<<<<")
-        logger.exception(e)
+        logger.error(f'>>>>>stage{STAGE_NAME} failed <<<<<<<')
+        logger.error(e)
+

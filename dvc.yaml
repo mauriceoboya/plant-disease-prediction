@@ -13,10 +13,10 @@ stages:
     - src/cnnClassifier/pipeline/stage_02_premodel.py
     - config/config.yaml
     params:
-    - IMAGE_SIZE
-    - INCLUDE_TOP
-    - CLASSES
-    - WEIGHTS
-    - LEARNING_RATE
-    outs: 
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - CLASSES
+      - WEIGHTS
+      - LEARNING_RATE
+    outs:
     - artifacts/prepare_base_model
