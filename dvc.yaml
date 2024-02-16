@@ -6,3 +6,17 @@ stages:
     - config/config.yaml
     outs:
     - artifacts/data_ingestion/Plant_leave_diseases_dataset_without_augmentation
+  
+  prepare_base_model:
+    cmd: python src/cnnClassifier/pipeline/stage_02_premodel.py
+    deps:
+    - src/cnnClassifier/pipeline/stage_02_premodel.py
+    - config/config.yaml
+    params:
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - CLASSES
+      - WEIGHTS
+      - LEARNING_RATE
+    outs:
+    - artifacts/prepare_base_model
